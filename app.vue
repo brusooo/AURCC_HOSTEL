@@ -1,5 +1,5 @@
 <template>
-  <div>
-    <h1>Welcome guys</h1>
+  <div class="w-full min-h-screen flex justify-center items-center">
+    <NuxtPage />
   </div>
 </template>

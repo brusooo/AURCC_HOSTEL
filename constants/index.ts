@@ -1,6 +1,6 @@
-const appName = "Hostlr"
+const appName : String = "Hostlr"
 
-const sidebar = {
+const sidebar : Object = {
     elementOne : {
         imgUrl : "/images/sidebar/dashboard.svg",
         textContent : "Dashboard"
@@ -23,12 +23,12 @@ const sidebar = {
     },
 }
 
-const logoHeader = {
+const logoHeader : Object = {
     imgUrl : "/images/sidebar/logo.png",
     textContent : "Hostlr"
 }
 
-const adminTopCards = [
+const adminTopCards : Array<Object> = [
     {
         cardHeader : "Fees Collected",
         cardValue : 10000,
@@ -55,5 +55,58 @@ const adminTopCards = [
     }
 ]
 
+const checkBoxValues : Array<String> = [
+    "ALL", 
+    "CSE",
+    "ECE",
+    "MECH",
+    "EEE",
+    "MBA",
+    "AI & DS"
+]
 
-export { sidebar , logoHeader, appName ,adminTopCards };
+const studentDetails : Array<Object> = [
+    {
+        name : "Jenifar",
+        department : "CSE",
+        email : "jeni@gmail.com",
+        mobile : "7979797979",
+        feeStatus : "Paid"
+
+    },
+    {
+        name : "Jenifar",
+        department : "ECE",
+        email : "jeni@gmail.com",
+        mobile : "7979797979",
+        feeStatus : "Pending"
+
+    },
+    {
+        name : "Jenifar",
+        department : "EEE",
+        email : "jeni@gmail.com",
+        mobile : "7979797979",
+        feeStatus : "Pending"
+
+    },
+    {
+        name : "Jenifar",
+        department : "MECH",
+        email : "jeni@gmail.com",
+        mobile : "7979797979",
+        feeStatus : "Paid"
+
+    },
+    {
+        name : "Jenifar",
+        department : "AI & DS",
+        email : "jeni@gmail.com",
+        mobile : "7979797979",
+        feeStatus : "Pending"
+
+    }
+]
+
+
+export { sidebar , logoHeader, appName ,adminTopCards, checkBoxValues, studentDetails };

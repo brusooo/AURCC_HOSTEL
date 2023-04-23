@@ -1,9 +1,9 @@
 <template>
   <div
-    v-if="loading.valueof"
+    v-if="loading"
     class="relative w-full min-h-screen flex justify-center items-center"
   >
-    loading
+    <Loader />
   </div>
   <div v-else class="relative w-full min-h-screen flex">
     <!-- Sidebar for admin with components-->
@@ -22,7 +22,6 @@
       <AdminGrocery v-if="activeComponent == 'Grocery'" />
       <AdminRooms v-if="activeComponent == 'Rooms'" />
       <AdminStudents v-if="activeComponent == 'Students'" />
-      <component :is="activeComponent" />
     </div>
   </div>
 </template>
@@ -31,14 +30,17 @@
 //from composables
 import Keycloak from "keycloak-js";
 let loading = ref(true);
+
 const activeComponent = getActiveComponent();
 const menuToggled = showMenuToggler();
 
-const keycloak = new Keycloak('keycloak.json');
-keycloak.init({ onLoad: 'check-sso',checkLoginIframe: false }).then(async (authenticated) => {
-  if(authenticated) loading.value = false
-  else await navigateTo("/")
-});
+const keycloak = new Keycloak("keycloak.json");
+keycloak
+  .init({ onLoad: "check-sso", checkLoginIframe: false })
+  .then(async (authenticated) => {
+    if (authenticated) loading.value = false;
+    else await navigateTo("/");
+  });
 </script>
 
 <style scoped></style>

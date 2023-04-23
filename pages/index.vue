@@ -1,5 +1,12 @@
 <template>
   <div
+    v-if="loading"
+    class="relative w-full min-h-screen flex justify-center items-center"
+  >
+    <Loader />
+  </div>
+  <div
+    v-else
     class="container flex flex-col-reverse px-6 mx-auto mt-10 space-y-0 md:space-y-0 md:flex-row"
   >
     <div class="max-w-6xl px-10 mx-auto mt-20 text-center justify-center p-5">
@@ -30,10 +37,11 @@
 
 <script setup>
 import Keycloak from "keycloak-js";
+const loading = ref(true);
 const keycloak = new Keycloak("keycloak.json");
 keycloak
   .init({
-    onLoad: 'check-sso',
+    onLoad: "check-sso",
     checkLoginIFrame: false,
   })
   .then(async (authenticated) => {
@@ -45,6 +53,10 @@ keycloak
       }
     }
   });
+
+setTimeout(() => {
+  loading.value = false
+}, 3000);
 
 async function getToKeycloak() {
   keycloak.login({

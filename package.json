@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "daisyui": "^2.51.3",
-    "keycloak-js": "^21.0.1"
+    "keycloak-js": "^21.0.1",
+    "tw-elements": "^1.0.0-beta2",
+    "vue-tailwind-datepicker": "^1.4.3"
   }
 }

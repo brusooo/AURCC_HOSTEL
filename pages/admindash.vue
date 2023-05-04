@@ -27,13 +27,13 @@
 </template>
 
 <script setup>
-//from composables
+ // from composables
 import Keycloak from "keycloak-js";
 let loading = ref(true);
 
 const activeComponent = getActiveComponent();
 const menuToggled = showMenuToggler();
-
+ 
 const keycloak = new Keycloak("keycloak.json");
 keycloak
   .init({ onLoad: "check-sso", checkLoginIframe: false })

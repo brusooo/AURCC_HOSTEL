@@ -55,6 +55,11 @@ const adminTopCards : Array<Object> = [
     }
 ]
 
+
+
+
+
+
 const checkBoxValues : Array<String> = [
     "ALL", 
     "CSE",
@@ -64,6 +69,8 @@ const checkBoxValues : Array<String> = [
     "MBA",
     "AI & DS"
 ]
+
+
 
 const studentDetails : Array<Object> = [
     {
@@ -108,5 +115,81 @@ const studentDetails : Array<Object> = [
     }
 ]
 
+//Rathish
 
-export { sidebar , logoHeader, appName ,adminTopCards, checkBoxValues, studentDetails };
+const roomGenderValues :Array<String> =[
+    "Boys",
+    "Girls"
+]
+
+const student : Array<object>=[
+   
+    {
+        CardName :"xyz",
+        cardEmail:"xyz@yahoo.com",
+        cardIcon :"/images/general/profile1.png"
+    },
+    {
+        CardName :"xyz",
+        cardEmail:"xyz@gmail.com",
+        cardIcon :"/images/general/profile1.png"
+    },
+    {
+        CardName :"xyz",
+        cardEmail:"xyz@protonmail",
+        cardIcon :"/images/general/profile1.png"
+    },
+    {
+        CardName :"xyz",
+        cardEmail:"xyz@rediffmail",
+        cardIcon :"/images/general/profile1.png"
+    }, 
+
+
+]
+
+const roomsCards: Array<object>=[
+    {
+    cardValue:101,
+    cardName:"room1"
+    },
+    {
+    cardValue:102,
+    cardName:"room2"
+    },
+    {
+    cardValue:103,
+    cardName:"room3"
+    },
+    {
+    cardValue:104,
+    cardName:"room4"
+    },
+    {
+    cardValue:105,
+    cardName:"room5"
+    }
+
+
+
+]
+const studentRoomCards : Array<Object> = [
+    {
+    cardHeader:"Total:",
+    cardValue: 1500,
+    cardName: "roomsCard1"
+    },
+    {
+    cardHeader:"Boys:",
+    cardValue: 750,
+    cardName: "roomsCard1",
+    },
+    {
+    cardHeader:"Girls:",
+    cardValue: 750,
+    cardName: "roomsCard3"
+    
+    }
+]
+
+export { sidebar , logoHeader, appName ,adminTopCards, checkBoxValues,roomGenderValues, studentDetails,studentRoomCards,roomsCards,student};

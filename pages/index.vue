@@ -31,7 +31,6 @@
 import Keycloak from "keycloak-js";
 const loading = ref(true);
 const keycloak = new Keycloak("keycloak.json");
-
 keycloak
   .init({
     onLoad: "check-sso",
@@ -47,15 +46,15 @@ keycloak
     }
   });
 
-setTimeout(() => {
-  loading.value = false
-}, 3000);
+// setTimeout(() => {
+//   loading.value = false
+// }, 3000);
 
-async function getToKeycloak() {
-  keycloak.login({
-    redirectUri: "http://localhost:3000/",
-  });
-}
+// async function getToKeycloak() {
+//   keycloak.login({
+//     redirectUri: "http://localhost:3000/",
+//   });
+// }
 </script>
 
 <style scoped></style>

@@ -59,7 +59,7 @@
 
                                 <div class="md:col-span-5 text-right pt-3">
                                     <div class="inline-flex items-end ">
-                                        <button
+                                        <button @click="submitForm"
                                             class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
                                     </div>
                                 </div>
@@ -76,12 +76,53 @@
     </div>
 </template>
 
-<script >
 
+<style scoped></style>
+
+
+<script>
 var today = new Date();
 
 console.log(today.getHours())
 
-</script>
+export default {
+  data() {
+    return {
+      formData: {
+        name: '',
+        from:'',
+        to:'',
+        reason:'',
+        inforemd_parent_on:'',
 
-<style scoped></style>
+
+        // Initialize other form fields here
+      }
+    }
+  },
+  methods: {
+    async submitForm() {
+      try {
+        const response = await fetch('', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(this.formData)
+        });
+
+        if (response.ok) {
+          this.showSuccessPopup();
+        } else {
+          throw new Error('Failed to submit form');
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    showSuccessPopup() {
+      alert('Submitted Successfully');
+    }
+  }
+}
+</script>

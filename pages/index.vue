@@ -31,6 +31,7 @@
 import Keycloak from "keycloak-js";
 const loading = ref(true);
 const keycloak = new Keycloak("keycloak.json");
+
 keycloak
   .init({
     onLoad: "check-sso",

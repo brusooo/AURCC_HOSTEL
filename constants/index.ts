@@ -182,7 +182,7 @@ const studentRoomCards : Array<Object> = [
     {
     cardHeader:"Boys:",
     cardValue: 750,
-    cardName: "roomsCard1",
+    cardName: "roomsCard2",
     },
     {
     cardHeader:"Girls:",

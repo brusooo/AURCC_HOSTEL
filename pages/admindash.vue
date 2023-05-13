@@ -14,7 +14,7 @@
     >
       <AdminSidebar />
     </div>
-    <div class="relative xl:w-[85%] w-full min-h-screen">
+    <div class="relative xl:w-[85%] w-full min-h-screen ">
       <!-- Navbar for user and menu -->
       <AdminNavbar />
       <AdminDashboard v-if="activeComponent == 'Dashboard'" />

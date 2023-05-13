@@ -1,28 +1,27 @@
-*,html{
+*,
+html {
   overflow-x: hidden;
 }
 
 .TopCardOne {
-  background-color: #fff1d8;
+  background-color: #0077b6;
 }
 .TopCardTwo {
-  background-color: #ffeee6;
+  background-color: #0096c7;
 }
 .TopCardThree {
-  background-color: #edfeed;
+  background-color: #00b4d8;
 }
 .TopCardFour {
-  background-color: #fff1d8;
+  background-color: #48cae4;
 }
-.roomCard1{
-  background-color:aquamarine;
 
+.roomsCard1 {
+  background-color: #0077b6;
 }
-.roomCard2{
-  background-color:aquamarine;
-
+.roomsCard2 {
+  background-color: #0096c7;
 }
-.roomCard3{
-  background-color:aquamarine;
-
+.roomsCard3 {
+  background-color: #00b4d8;
 }

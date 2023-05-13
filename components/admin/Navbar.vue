@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full h-24 flex justify-center items-center">
+  <div class="relative w-full h-[12%] flex justify-center items-center">
     <!-- Each route name with welcome  -->
     <div class="relative flex flex-col translate-x-7">
       <h1 class="sm:text-3xl text-xl font-mono font-bold">Property Dashboard</h1>

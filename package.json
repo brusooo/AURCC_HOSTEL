@@ -12,6 +12,7 @@
     "nuxt": "^3.2.3"
   },
   "dependencies": {
+    "@bundled-es-modules/axios": "^0.27.2",
     "daisyui": "^2.51.3",
     "keycloak-js": "^21.0.1",
     "tw-elements": "^1.0.0-beta2",

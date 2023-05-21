@@ -46,15 +46,15 @@ keycloak
     }
   });
 
-// setTimeout(() => {
-//   loading.value = false
-// }, 3000);
+setTimeout(() => {
+  loading.value = false
+}, 3000);
 
-// async function getToKeycloak() {
-//   keycloak.login({
-//     redirectUri: "http://localhost:3000/",
-//   });
-// }
+async function getToKeycloak() {
+  keycloak.login({
+    redirectUri: "http://localhost:3000/",
+  });
+}
 </script>
 
 <style scoped></style>

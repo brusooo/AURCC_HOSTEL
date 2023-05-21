@@ -1,12 +1,14 @@
 export const getActiveComponent = () =>
   useState<string>("activeComponent", () => "Dashboard");
 
-  export const getActiveHostelRoomId = () =>
-  useState<number>("activeHostelRoomId", () => 269);
+export const getActiveHostelRoomId = () =>
+  useState<number>("activeHostelRoomId", () => 1);
 
-  export const getActiveHostel = () =>
+export const getActiveHostelRoomNo = () =>
+  useState<number>("activeHostelRoomNo", () => 1);
+
+export const getActiveHostel = () =>
   useState<string>("activeHostel", () => "boys");
-
 
 export const showMenuToggler = () =>
   useState<boolean>("showToggler", () => false);

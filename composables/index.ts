@@ -1,20 +1,15 @@
-export const getActiveComponent = () =>
-  useState<string>("activeComponent", () => "Dashboard");
+export const getActiveComponent = () => useState<string>("activeComponent", () => "Dashboard");
 
-export const getActiveHostelRoomId = () =>
-  useState<number>("activeHostelRoomId", () => 1);
+export const getActiveStudent = () => useState<Number>("activeStudent", () => 710020104012);
 
-export const getActiveHostelRoomNo = () =>
-  useState<number>("activeHostelRoomNo", () => 1);
+export const getActiveHostelRoomId = () => useState<number>("activeHostelRoomId", () => 1);
 
-export const getActiveHostel = () =>
-  useState<string>("activeHostel", () => "boys");
+export const getActiveHostelRoomNo = () => useState<number>("activeHostelRoomNo", () => 1);
 
-export const showMenuToggler = () =>
-  useState<boolean>("showToggler", () => false);
+export const getActiveHostel = () => useState<string>("activeHostel", () => "boys");
 
-export const getAvailableRooms = () =>
-  useState<Array<Object>>("availableRooms", () => [])
+export const showMenuToggler = () => useState<boolean>("showToggler", () => false);
 
-export const activeDepartment = () =>
-  useState<Array<String>>("activeDepartment", () => ["ALL"]);
+export const getAvailableRooms = () => useState<Array<Object>>("availableRooms", () => [])
+
+export const activeDepartment = () => useState<Array<String>>("activeDepartment", () => ["ALL"]);

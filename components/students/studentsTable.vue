@@ -20,7 +20,7 @@
         </td>
         <td>{{ student.department }}</td>
         <td>{{ student.email }}</td>
-        <td>{{ student.mobileNumber }}</td>
+        <td>{{ student.mobile_number }}</td>
         <td>
           <span :class="`${student.feePaid ? 'bg-green-500' : 'bg-red-500'
             } py-1 px-3 rounded-full text-white`">{{ student.feePaid ? "Paid" : "Pending" }}</span>
@@ -34,7 +34,7 @@
 import { activeDepartment } from "../../composables";
 //from composables
 const studentDetails = await useFetch(
-  () => "http://localhost:8000/users/dept/CSE"
+  () => "http://127.0.0.1:8000/users/dept/CSE"
 ).then(({ data }) => data.value);
 
 const feeStatus = "Paid";

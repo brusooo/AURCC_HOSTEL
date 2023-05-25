@@ -41,7 +41,7 @@ keycloak
       if (keycloak.hasRealmRole("admin")) {
         await navigateTo("/admindash");
       } else {
-        await navigateTo("/student");
+        await navigateTo("/studentdash");
       }
     }
   });

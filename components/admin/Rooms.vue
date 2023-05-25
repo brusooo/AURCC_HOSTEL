@@ -41,7 +41,11 @@
             </div>
             <div
                   :class="`absolute bottom-0 left-0 w-full h-[88%] flex justify-center items-center bg-white  z-40 ${fillRoom || addInmatesForm ? 'visible' : 'hidden'}`">
+                  
+                  <!-- add rooms component -->
                   <RoomsAddRoom v-if="fillRoom" :fillRoomProp="fillRoomForm" :availableRooms="availableRooms" />
+                  
+                  <!-- add inmates component -->
                   <RoomsAddInmates v-if="addInmatesForm" :addInmatesProp="showAddInmatesForm"
                         :roomInmates="activeRoomInmates.inmates" :hostelRoomsByCat="hostelRoomsByCat" />
             </div>
@@ -75,7 +79,7 @@ const hostelRoomsByCat = async (hostelType) => await useFetch(
 ).then(({ data }) => {
       availableRooms.value = data.value
       let returnVal = Object.values(availableRooms.value).find((rooms) => rooms.id == activeHostelRoomId.value)
-      if(returnVal){
+      if (returnVal) {
             activeRoomInmates.value = returnVal
       }
       loading.value = false
@@ -90,19 +94,4 @@ const showAddInmatesForm = (val) => addInmatesForm.value = !val;
 
 </script>
 
-<style scoped>
-/* Hide scrollbar for Chrome, Safari and Opera */
-</style>
-
-
-<!-- .roomsInmates::-webkit-scrollbar {
-      display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.roomsInmates {
-      -ms-overflow-style: none;
-      /* IE and Edge */
-      scrollbar-width: none;
-      /* Firefox */
-} -->
+<style scoped></style>

@@ -1,5 +1,3 @@
-const appName : String = "Hostlr"
-
 const sidebar : Object = {
     elementOne : {
         imgUrl : "/images/sidebar/dashboard.svg",
@@ -72,47 +70,48 @@ const checkBoxValues : Array<String> = [
 
 
 
-const studentDetails : Array<Object> = [
+const studentTransactionDetails : Array<Object> = [
     {
-        name : "Jenifar",
-        department : "CSE",
-        email : "jeni@gmail.com",
-        mobile : "7979797979",
-        feeStatus : "Paid"
-
+        sem : 1,
+        amount : 15000,
+        status : "paid"
     },
     {
-        name : "Jenifar",
-        department : "ECE",
-        email : "jeni@gmail.com",
-        mobile : "7979797979",
-        feeStatus : "Pending"
-
+        sem : 2,
+        amount : 15000,
+        status : "paid"
     },
     {
-        name : "Jenifar",
-        department : "EEE",
-        email : "jeni@gmail.com",
-        mobile : "7979797979",
-        feeStatus : "Pending"
-
+        sem : 3,
+        amount : 15000,
+        status : "pending"
     },
     {
-        name : "Jenifar",
-        department : "MECH",
-        email : "jeni@gmail.com",
-        mobile : "7979797979",
-        feeStatus : "Paid"
+        sem : 4,
+        amount : 15000,
+        status : "paid"
+    },
 
+    {
+        sem : 5,
+        amount : 15000,
+        status : "pending"
     },
     {
-        name : "Jenifar",
-        department : "AI & DS",
-        email : "jeni@gmail.com",
-        mobile : "7979797979",
-        feeStatus : "Pending"
-
-    }
+        sem : 6,
+        amount : 15000,
+        status : "paid"
+    },
+    {
+        sem : 7,
+        amount : 15000,
+        status : "pending"
+    },
+    {
+        sem : 8,
+        amount : 15000,
+        status : "pending"
+    },
 ]
 
 //Rathish
@@ -192,4 +191,4 @@ const studentRoomCards : Array<Object> = [
     }
 ]
 
-export { sidebar , logoHeader, appName ,adminTopCards, checkBoxValues,roomGenderValues, studentDetails,studentRoomCards,roomsCards,student};
+export { sidebar , logoHeader, adminTopCards, checkBoxValues,roomGenderValues, studentTransactionDetails,studentRoomCards,roomsCards,student};

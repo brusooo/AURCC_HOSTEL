@@ -1,126 +1,117 @@
 <template>
-    <div class="min-h-screen p-2 w-screen bg-gray-100 flex items-center justify-center">
-        <div class="container max-w-screen-lg mx-auto">
-            <div>
-                <h2 class="font-semibold text-xl text-gray-600 pb-8">Leave Form</h2>
+    <!-- <div>
+        <h1>Create a New Post</h1>
+        <form @submit.prevent="createPost">
+            <input type="number" v-model="post.id" placeholder="id" />
+            <input type="date" v-model="post.to_" placeholder="to" />
+            <input type="date" v-model="post.from_" @input="logInputValue" placeholder="from" />
+            <input type="text" v-model="post.reason_" placeholder="reason here" />
+            <input type="time" v-model="post.informed_parent_on" placeholder="informed parent on" />
+            <button type="submit">Create Post</button>
+        </form>
+    </div> -->
+    <div class="container max-w-screen-lg mx-auto">
+                <div>
+                    <h2 class="font-semibold text-xl text-gray-600 pl-4 lg:pl-40  ">Leave Form</h2>
 
 
-                <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
-                    <div class="grid gap-4 gap-y-3 text-sm grid-cols-1 lg:grid-cols-3">
+                    <div class="bg-white rounded  p-4 px-4 md:p-8 mb-6">
+                        <div class="grid gap-4 gap-y-3 text-sm grid-cols-1 lg:grid-cols-3">
 
 
-                        <div class="lg:col-span-2">
-                            <div class="grid gap-6 gap-y-6 text-sm grid-cols-1 md:grid-cols-5">
-                                <div class="md:col-span-6">
-
-                                    <label for="full_name">Name</label>
-                                    <input type="text" name="full_name" id="full_name"
-                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
-                                </div>
+                            <div class="lg:col-span-2">
+                                <div class="grid gap-6 gap-y-6 text-sm grid-cols-1 lg:pl-32 md:grid-cols-5">
+                                    <input type="number" v-model="post.id" placeholder="id" />
+                                    <input type="number" v-model="post.stuid_" placeholder="stuid" />
 
 
-                                <div class="md:col-span-6">
-                                    <label class="text-base" for="email">Leave Period</label>
-                                    <div class="md:col-span-3 pl-3">
-                                        <label for="email">From</label>
+                                    <div class="md:col-span-6">
+                                        <label class="text-sm text-slate-600" for="email">Leave Period</label>
+                                        <div class="md:col-span-3 pl-3">
+                                            <label for="email " class="text-slate-400 text-sm">From</label>
+                                            
+                                            <input type="date" v-model="post.from_"
+                                                :min="new Date().getFullYear() + '-' + ((new Date().getMonth() + 1) > 9 ? '' : '0') + (new Date().getMonth() + 1) + '-' + (new Date().getDate() > 9 ? '' : '0') + new Date().getDate()"
+                                                class="h-8 border mt-1 rounded px-4 w-full bg-gray-50" 
+                                                 />
+                                        </div>
+                                        <div class="md:col-span-2 pl-3">
 
-                                        <input type="date" name="email" id="email"
-                                            :min="new Date().getFullYear() + '-' + ((new Date().getMonth() + 1) > 9 ? '' : '0') + (new Date().getMonth() + 1) + '-' + (new Date().getDate() > 9 ? '' : '0') + new Date().getDate()"
-                                            class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""
-                                            placeholder="" />
+                                            <label class="text-slate-400 text-sm">To</label>
+
+                                            <input type="date" v-model="post.to_" name="email" id="email"
+                                                :min="new Date().getFullYear() + '-' + ((new Date().getMonth() + 1) > 9 ? '' : '0') + (new Date().getMonth() + 1) + '-' + (new Date().getDate() > 9 ? '' : '0') + new Date().getDate()"
+                                                class="h-8 border mt-1 rounded px-4 w-full bg-gray-50"
+                                                placeholder="" />
+                                        </div>
                                     </div>
-                                    <div class="md:col-span-2 pl-3">
 
-                                        <label for="email">To</label>
-
-                                        <input type="date" name="email" id="email"
-                                            :min="new Date().getFullYear() + '-' + ((new Date().getMonth() + 1) > 9 ? '' : '0') + (new Date().getMonth() + 1) + '-' + (new Date().getDate() > 9 ? '' : '0') + new Date().getDate()"
-                                            class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""
-                                            placeholder="" />
+                                    <div class="md:col-span-6">
+                                        <label class="text-slate-600 text-sm">Reason</label>
+                                        <input type="text" v-model="post.reason_" name="address" id="address"
+                                            class="h-8 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" />
                                     </div>
-                                </div>
 
-                                <div class="md:col-span-6">
-                                    <label for="address">Reason</label>
-                                    <input type="text" name="address" id="address"
-                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
-                                </div>
-
-                                <div class="md:col-span-6">
-                                    <label for="city">Informed Parent On</label>
-                                    <input type="time" name="city" id="city"
-                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
-                                </div>
-
-
-
-
-
-
-                                <div class="md:col-span-5 text-right pt-3">
-                                    <div class="inline-flex items-end ">
-                                        <button @click="submitForm"
-                                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+                                    <div class="md:col-span-6">
+                                        <label class="text-slate-600 text-sm">Informed Parent On</label>
+                                        <input type="time" v-model="post.informed_parent_on" name="city" id="city"
+                                            class="h-8 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" />
                                     </div>
-                                </div>
 
+
+
+
+
+
+                                    <div class="md:col-span-5 text-right pt-3">
+                                        <div class="inline-flex items-end ">
+                                            <button @click="createPost"
+                                                class=" bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-8 rounded">Submit</button>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
             </div>
-
-
-        </div>
-
-    </div>
 </template>
 
 <script>
-var today = new Date();
 
-console.log(today.getHours())
 
 export default {
-    data() {
+    
+    setup() {
+     
+        function logInputValue() {
+            console.log(post.from_)
+        
+        }
+       
+        
+        const post = { id: '',stuid_:'', from_: '', to_: '',accepted_by: 'notaccepted', reason_: '', informed_parent_on: '' };
+
+        const createPost = async () => {
+            
+            const response = await fetch('http://127.0.0.1:8000/users/create', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(post)
+            });
+            const createdData = await response.json();
+            console.log(createdData);
+        };
+
         return {
-            formData: {
-                name: '',
-                from: '',
-                to: '',
-                reason: '',
-                inforemd_parent_on: '',
-
-
-                // Initialize other form fields here
-            }
-        }
+            post,
+            createPost,
+        };
     },
-    methods: {
-        async submitForm() {
-            try {
-                const response = await fetch('', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(this.formData)
-                });
-
-                if (response.ok) {
-                    this.showSuccessPopup();
-                } else {
-                    throw new Error('Failed to submit form');
-                }
-            } catch (error) {
-                console.error(error);
-            }
-        },
-        showSuccessPopup() {
-            alert('Submitted Successfully');
-        }
-    }
-}
+};
 </script>
-
-<style scoped></style>

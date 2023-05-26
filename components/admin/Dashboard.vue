@@ -1,5 +1,5 @@
 <template>
-  <div class="relative top-12  flex flex-wrap  justify-center items-center gap-9">
+  <div class="relative top-12 flex flex-wrap  justify-center items-center gap-9">
     <span v-for="cardElement in adminTopCards">
       <CardsTopCard :cardContent="cardElement" />
     </span>

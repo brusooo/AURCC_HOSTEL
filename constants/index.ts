@@ -3,14 +3,14 @@ const sidebar : Object = {
         imgUrl : "/images/sidebar/dashboard.svg",
         textContent : "Dashboard"
     },
-    elementTwo : {
-        imgUrl : "/images/sidebar/fees.svg",
-        textContent : "Fees"
-    },
-    elementThree : {
-        imgUrl : "/images/sidebar/grocery.svg",
-        textContent : "Grocery"
-    },
+    // elementTwo : {
+    //     imgUrl : "/images/sidebar/fees.svg",
+    //     textContent : "Fees"
+    // },
+    // elementThree : {
+    //     imgUrl : "/images/sidebar/grocery.svg",
+    //     textContent : "Grocery"
+    // },
     elementFour : {
         imgUrl : "/images/sidebar/rooms.svg",
         textContent : "Rooms"

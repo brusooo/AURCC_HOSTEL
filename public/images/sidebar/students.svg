@@ -1,4 +1,4 @@
 <svg width="180" height="205" viewBox="0 0 180 205" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="90" cy="50" r="50" fill="black"/>
-<path d="M0 163C0 135.386 22.3858 113 50 113H130C157.614 113 180 135.386 180 163V205H0V163Z" fill="black"/>
+<circle cx="90" cy="50" r="50" fill="white"/>
+<path d="M0 163C0 135.386 22.3858 113 50 113H130C157.614 113 180 135.386 180 163V205H0V163Z" fill="white"/>
 </svg>

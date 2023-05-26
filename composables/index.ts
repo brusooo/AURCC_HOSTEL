@@ -8,7 +8,7 @@ export const getActiveHostelRoomNo = () => useState<number>("activeHostelRoomNo"
 
 export const getActiveHostel = () => useState<string>("activeHostel", () => "boys");
 
-export const showMenuToggler = () => useState<boolean>("showToggler", () => false);
+export const showMenuToggler = () => useState<boolean>("showToggler", () => true);
 
 export const getAvailableRooms = () => useState<Array<Object>>("availableRooms", () => [])
 
